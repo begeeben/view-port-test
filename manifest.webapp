@@ -1,0 +1,5 @@
+{
+  "name": "view-port-test",
+  "description": "Test view port on hosted app",
+  "launch_path": "/view-port-test/index.html"
+}

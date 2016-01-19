@@ -4,10 +4,27 @@
 
 	</head>
 	<body>
+		<button id="install-button" disabled>Install</button>
 		<a href="device-width.html">device-width</a>
 		<a href="1920.html">1920</a>
 		<a href="1300.html">1300</a>
 		<a href="960.html">960</a>
 		<a href="480.html">480</a>
+
+		<script>
+			var installButton = document.getElementById('install-button');
+
+			if (navigator.mozApps) {
+			  console.log('mozApps available');
+			  mozAppsStatus.textContent = 'mozApps available';
+			  installButton.removeAttribute('disabled');
+			  installButton.addEventListener('click', function () {
+			    navigator.mozApps.install('http://begeeben.github.io/view-port-test/manifest.webapp');
+			  });
+			} else {
+			  console.log('mozApps unavailable');
+			  mozAppsStatus.textContent = 'mozApps unavailable';
+			}
+			</script>
 	</body>
 </html>
