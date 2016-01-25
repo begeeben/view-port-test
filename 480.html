@@ -6,24 +6,33 @@
 		<style>
 			html, body {
 				height: 100%;
+				color: #002b36;
+				font-family: sans-serif;
 			}
 
 			body {
-				background-color: blue;
+				background-color: #fdf6e3;
 			}
 
 			div {
 				width: 240px;
 				height: 50%;
-				background-color: red;
+				background-color: #eee8d5;
+			}
+
+			a {
+				color: #0268bd;
 			}
 		</style>
 	</head>
 	<body>
-		<div id="container"></div>
+		<div id="container">
+			<a href="index.html">Back</a>
+			<p id="info"></p>
+		</div>
 
 		<script>
-			document.getElementById('container').textContent = 'screen.width: ' + screen.width + ', window.innerWidth: ' + window.innerWidth;
+			document.getElementById('info').textContent = 'screen.width: ' + screen.width + ', window.innerWidth: ' + window.innerWidth;
 		</script>
 	</body>
 </html>
